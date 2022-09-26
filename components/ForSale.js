@@ -11,6 +11,7 @@ import {
 
 import metaData from "../public/metadata.json";
 import ItemGrid from "../components/ItemGrid";
+import AttributeListBox from "../components/AttributeListBox";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -23,6 +24,45 @@ const sortOptions = [
 const subCategories = [{ name: "Founder's Collection", href: "#" }];
 
 const filters = [
+  {
+    id: "edition",
+    name: "Special Edition",
+    amount: 4,
+    options: [
+      { value: "genesis", label: "Genesis", checked: false, amount: 1 },
+      { value: "collectors", label: "Collector's", checked: false, amount: 3 },
+      { value: "standard", label: "Standard", checked: false, amount: 34 },
+      { value: "airdrop", label: "Airdrop", checked: false, amount: 5 },
+    ],
+  },
+  {
+    id: "cardType",
+    name: "Card Type",
+    amount: 8,
+    options: [
+      { value: "Celebratory", label: "Celebratory", checked: false, amount: 1 },
+      {
+        value: "Get Well Soon",
+        label: "Get Well Soon",
+        checked: false,
+        amount: 3,
+      },
+      { value: "Halloween", label: "Halloween", checked: false, amount: 34 },
+      { value: "Easter", label: "Easter", checked: false, amount: 5 },
+      {
+        value: "Congratulations",
+        label: "Congratulations",
+        checked: false,
+        amount: 1,
+      },
+      { value: "Birthday", label: "Birthday", checked: false, amount: 3 },
+      { value: "Halloween", label: "Halloween", checked: false, amount: 34 },
+      { value: "Valentines", label: "Valentines", checked: false, amount: 5 },
+    ],
+  },
+];
+
+const exFilters = [
   {
     id: "color",
     name: "Color",
@@ -123,63 +163,7 @@ export default function Example() {
                   </div>
 
                   <form className="mt-4 border-gray-200">
-                    {filters.map((section) => (
-                      <Disclosure
-                        as="div"
-                        key={section.id}
-                        className="border-t border-gray-200 px-4 py-6"
-                      >
-                        {({ open }) => (
-                          <>
-                            <h3 className="-mx-2 -my-3 flow-root">
-                              <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
-                                <span className="font-medium text-gray-900">
-                                  {section.name}
-                                </span>
-                                <span className="ml-6 flex items-center">
-                                  {open ? (
-                                    <MinusIcon
-                                      className="h-5 w-5"
-                                      aria-hidden="true"
-                                    />
-                                  ) : (
-                                    <PlusIcon
-                                      className="h-5 w-5"
-                                      aria-hidden="true"
-                                    />
-                                  )}
-                                </span>
-                              </Disclosure.Button>
-                            </h3>
-                            <Disclosure.Panel className="pt-6">
-                              <div className="space-y-6">
-                                {section.options.map((option, optionIdx) => (
-                                  <div
-                                    key={option.value}
-                                    className="flex items-center"
-                                  >
-                                    <input
-                                      id={`filter-mobile-${section.id}-${optionIdx}`}
-                                      name={`${section.id}[]`}
-                                      defaultValue={option.value}
-                                      type="checkbox"
-                                      defaultChecked={option.checked}
-                                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                    />
-                                    <label
-                                      htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                                    >
-                                      {option.label}
-                                    </label>
-                                  </div>
-                                ))}
-                              </div>
-                            </Disclosure.Panel>
-                          </>
-                        )}
-                      </Disclosure>
-                    ))}
+                    <AttributeListBox attributes={filters} />
                   </form>
                 </Dialog.Panel>
               </Transition.Child>
@@ -263,9 +247,7 @@ export default function Example() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              {/* Filters */}
               <form className="hidden lg:block">
-                <h3 className="sr-only">Categories</h3>
                 <ul
                   role="list"
                   className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
@@ -281,64 +263,7 @@ export default function Example() {
                     </li>
                   ))}
                 </ul>
-
-                {filters.map((section) => (
-                  <Disclosure
-                    as="div"
-                    key={section.id}
-                    className="border-b border-gray-200 py-6"
-                  >
-                    {({ open }) => (
-                      <>
-                        <h3 className="-my-3 flow-root">
-                          <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                            <span className="font-medium text-gray-900">
-                              {section.name}
-                            </span>
-                            <span className="ml-6 flex items-center">
-                              {open ? (
-                                <MinusIcon
-                                  className="h-5 w-5"
-                                  aria-hidden="true"
-                                />
-                              ) : (
-                                <PlusIcon
-                                  className="h-5 w-5"
-                                  aria-hidden="true"
-                                />
-                              )}
-                            </span>
-                          </Disclosure.Button>
-                        </h3>
-                        <Disclosure.Panel className="pt-6">
-                          <div className="space-y-4">
-                            {section.options.map((option, optionIdx) => (
-                              <div
-                                key={option.value}
-                                className="flex items-center"
-                              >
-                                <input
-                                  id={`filter-${section.id}-${optionIdx}`}
-                                  name={`${section.id}[]`}
-                                  defaultValue={option.value}
-                                  type="checkbox"
-                                  defaultChecked={option.checked}
-                                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                />
-                                <label
-                                  htmlFor={`filter-${section.id}-${optionIdx}`}
-                                  className="ml-3 text-sm text-gray-600"
-                                >
-                                  {option.label}
-                                </label>
-                              </div>
-                            ))}
-                          </div>
-                        </Disclosure.Panel>
-                      </>
-                    )}
-                  </Disclosure>
-                ))}
+                <AttributeListBox attributes={filters} />
               </form>
 
               <div className="lg:col-span-3">
