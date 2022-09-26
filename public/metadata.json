@@ -1,0 +1,612 @@
+[
+  {
+    "id": 0,
+    "name": "Team OVT Genesis Token",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/0.png",
+    "description": "This is the first OVT token that the Ovation team minted to initialize our OpenSea page. It will forever be held in our multisig address.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Genesis" },
+      { "trait_type": "Card Type", "value": "Unique" },
+      { "trait_type": "Special Edition", "value": "Genesis" }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Marin's Birthday Cake - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/1.png",
+    "description": "Marin made a birthday cake! Chocolate with cream frosting, to celebrate a very special birthday. He hopes you love it!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Grattan's Birthday Cake - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/2.png",
+    "description": "Grattan the bear has a very special cake made for someone's birthday. She brought some sparklers to celebrate too!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Abner's Balloons - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/3.png",
+    "description": "Balloons are for celebrating! Abner has 7 balloons to mark this very special occasion.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Congratulations" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Darling's Flowers - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/4.png",
+    "description": "Flowers have a way of setting things right. Darling picked these flowers just for you and wants you to know someone cares about you.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Get Well Soon" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Benedict Wins - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/5.png",
+    "description": "You did it! Benedict is happy to be on the winning team and flap her little chicky wings from atop the trophy.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Congratulations" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Rufus Waves - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/6.png",
+    "description": "Rufus the puppy wants to say Thank You. You never know how much your actions impact the lives of others.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Thank You" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Laumoy is Floating - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/7.png",
+    "description": "Love is in the air! It's a beautiful feeling and sometimes you feel like you're floating away. Laumoy might have gotten too many balloons.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Valentines" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "The Clown Party - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/8.png",
+    "description": "The King Clown and his gingerbread posse are throwing a birthday party. Enjoy the special day with the clown and his friends.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Pumpkin Ceremony - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/9.png",
+    "description": "Ghosts congregate around candy ceremoniously, summoning the squash on All Hallow's Eve.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Halloween" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Jammin' Jukebox - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/10.png",
+    "description": "The jukebox is jammin' and sharing good vibes for everyone. Pick your favorite tune and get ready to boogie.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Celebratory" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Saint Nick's Trip - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/11.png",
+    "description": "Saint Nick is coming to celebrate the Christmas season. He brings presents and cheer while he checks over the Christmas tree.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Christmas" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Land on Your Feet - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/12.png",
+    "description": "Life can be tough but with 9 lives this kitty is ready for another go around. Get well soon and get back to scratchin!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Get Well Soon" },
+      { "trait_type": "Artist", "value": "@biscuitrie" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Dance of the Firefly - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/13.png",
+    "description": "The firefly puts on a display for little piggy. Even the smallest spark, can be like a star. Keep up the good work!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Celebratory" },
+      { "trait_type": "Artist", "value": "@biscuitrie" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Rabbits love Carrots - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/14.png",
+    "description": "Easter is a special holiday and spring is in the air. The bees are buzzing and the butterflies are dancing.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Easter" },
+      { "trait_type": "Artist", "value": "@biscuitrie" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Marin's Birthday Cake",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/15.png",
+    "description": "Marin made a birthday cake! Chocolate with cream frosting, to celebrate a very special birthday. He hopes you love it!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Grattan's Birthday Cake",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/16.png",
+    "description": "Grattan the bear has a very special cake made for someone's birthday. She brought some sparklers to celebrate too!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Abner's Balloons",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/17.png",
+    "description": "Balloons are for celebrating! Abner has 7 balloons to mark this very special occasion.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Congratulations" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Darling's Flowers",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/18.png",
+    "description": "Flowers have a way of setting things right. Darling picked these flowers just for you and wants you to know someone cares about you.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Get Well Soon" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Benedict Wins",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/19.png",
+    "description": "You did it! Benedict is happy to be on the winning team and flap her little chicky wings from atop the trophy.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Congratulations" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Rufus Waves",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/20.png",
+    "description": "Rufus the puppy wants to say Thank You. You never know how much your actions impact the lives of others.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Thank You" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Laumoy is Floating",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/21.png",
+    "description": "Love is in the air! It's a beautiful feeling and sometimes you feel like you're floating away. Laumoy might have gotten too many balloons.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Valentines" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "The Clown Party",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/22.jpeg",
+    "description": "The King Clown and his gingerbread posse are throwing a birthday party. Enjoy the special day with the clown and his friends.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Pumpkin Ceremony",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/23.png",
+    "description": "Ghosts congregate around candy ceremoniously, summoning the squash on All Hallow's Eve.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Halloween" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Jammin' Jukebox",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/24.png",
+    "description": "The jukebox is jammin' and sharing good vibes for everyone. Pick your favorite tune and get ready to boogie.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Celebratory" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Saint Nick's Trip",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/25.png",
+    "description": "Saint Nick is coming to celebrate the Christmas season. He brings presents and cheer while he checks over the Christmas tree.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Christmas" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Land on Your Feet",
+    "image": "https://ipfs.ovt.app/ipfs/QmfFCJKwa7WEFadKb7hniwQzr5JmZXdCWGkQuirPQLQ8jP/26.png",
+    "description": "Life can be tough but with 9 lives this kitty is ready for another go around. Get well soon and get back to scratchin!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Get Well Soon" },
+      { "trait_type": "Artist", "value": "@biscuitrie" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Dance of the Firefly",
+    "image": "https://ipfs.ovt.app/ipfs/QmfFCJKwa7WEFadKb7hniwQzr5JmZXdCWGkQuirPQLQ8jP/27.jpg",
+    "description": "The firefly puts on a display for little piggy. Even the smallest spark, can be like a star. Keep up the good work!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Celebratory" },
+      { "trait_type": "Artist", "value": "@biscuitrie" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Rabbits love Carrots",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/28.png",
+    "description": "Easter is a special holiday and spring is in the air. The bees are buzzing and the butterflies are dancing.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Easter" },
+      { "trait_type": "Artist", "value": "@biscuitrie" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Fatherhood is Timeless - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmShxHXpfXERXzQ9xYpqPQQQd7T8MqjnmMBgDWwYefa2dx/29.jpg",
+    "description": "Every little chimp looks up to his father. Bigfoot wanders with his son through the forest  at night, teaching him everything along the way.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Father's Day" },
+      { "trait_type": "Artist", "value": "@Kushwaha" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Superhero Dad - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmShxHXpfXERXzQ9xYpqPQQQd7T8MqjnmMBgDWwYefa2dx/30.jpg",
+    "description": "Dad get's home at night and to his kids he is a a superhero. A child sees their father as invincible and capable of anything. Give back to your dad with this Father's Day Card.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Father's Day" },
+      { "trait_type": "Artist", "value": "@ipunkherlambang" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Fatherhood is Timeless",
+    "image": "https://ipfs.ovt.app/ipfs/QmShxHXpfXERXzQ9xYpqPQQQd7T8MqjnmMBgDWwYefa2dx/31.jpg",
+    "description": "Every little chimp looks up to his father. Bigfoot wanders with his son through the forest  at night, teaching him everything along the way.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Father's Day" },
+      { "trait_type": "Artist", "value": "@Kushwaha" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Superhero Dad",
+    "image": "https://ipfs.ovt.app/ipfs/Qmdm1LRZ4k6Q3hTsEp9y7FxNvfjCNEwy7JuLZUG3CEex3H/32.jpg",
+    "description": "Dad get's home at night and to his kids he is a a superhero. A child sees their father as invincible and capable of anything. Give back to your dad with this Father's Day Card.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Father's Day" },
+      { "trait_type": "Artist", "value": "@ipunkherlambang" },
+      { "trait_type": "Special Edition", "value": "Standard" }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Fatherhood is Timeless - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmYsLR3i7GU8qUAoigSbWYLkjYysR6mR7RkuNeksahkNzC/33.jpg",
+    "description": "Every little chimp looks up to his father. Bigfoot wanders with his son through the forest  at night, teaching him everything along the way.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Father's Day" },
+      { "trait_type": "Artist", "value": "@Kushwaha" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Superhero Dad - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmYsLR3i7GU8qUAoigSbWYLkjYysR6mR7RkuNeksahkNzC/34.jpg",
+    "description": "Dad get's home at night and to his kids he is a a superhero. A child sees their father as invincible and capable of anything. Give back to your dad with this Father's Day Card.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Father's Day" },
+      { "trait_type": "Artist", "value": "@ipunkherlambang" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Benedict Wins - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmYsLR3i7GU8qUAoigSbWYLkjYysR6mR7RkuNeksahkNzC/35.png",
+    "description": "You did it! Benedict is happy to be on the winning team and flap her little chicky wings from atop the trophy.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Congratulations" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Rufus Waves - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmYsLR3i7GU8qUAoigSbWYLkjYysR6mR7RkuNeksahkNzC/36.png",
+    "description": "Rufus the puppy wants to say Thank You. You never know how much your actions impact the lives of others.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Thank You" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "4th of July 2022 - Collector's Edition",
+    "image": "https://ipfs.ovt.app/ipfs/bafybeib53reojo2cpvl255vivum7cbmqwcc6oz4ejc4ro7c2qhcu2kne54/42.jpg",
+    "description": "Just put all those troubles behind you and enjoy a BBQ in the most American way possible! This party has it all!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "4th of July" },
+      { "trait_type": "Artist", "value": "@ipunkherlambang" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "4th of July 2022",
+    "image": "https://ipfs.ovt.app/ipfs/bafybeickeykouqxvvtab3onovurmufgqe6ing3ogweix5qf5xtmooddlay/44.jpg",
+    "description": "Just put all those troubles behind you and enjoy a BBQ in the most American way possible! This party has it all!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "4th of July" },
+      { "trait_type": "Artist", "value": "@ipunkherlambang" },
+      { "trait_type": "Special Edition", "value": "Collectors" }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Laumoy is Floating - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmQDFqJKxMEF5NKEuhcabdsao6B1NwM2v2Lw8mGQdneX61/39.png",
+    "description": "Love is in the air! It's a beautiful feeling and sometimes you feel like you're floating away. Laumoy might have gotten too many balloons.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Valentines" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Darling's Flowers - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/bafybeid3dcettwgmhbt5f3qawn2a4ndhmdfzgvia6xd6lf3lkokrgrtqym/GWS%20Red.png",
+    "description": "Flowers have a way of setting things right. Darling picked these flowers just for you and wants you to know someone cares about you.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Get Well Soon" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Marin's Birthday Cake - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmQDFqJKxMEF5NKEuhcabdsao6B1NwM2v2Lw8mGQdneX61/41.png",
+    "description": "Marin made a birthday cake! Chocolate with cream frosting, to celebrate a very special birthday. He hopes you love it!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "4th of July 2022 - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/bafybeiebngv4loltaeuqy2jmz6t55yya34tekyki5flk7thl3lqq2xx7ea/43.jpg",
+    "description": "Just put all those troubles behind you and enjoy a BBQ in the most American way possible! This party has it all!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "4th of July" },
+      { "trait_type": "Artist", "value": "@ipunkherlambang" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Grattan's Birthday Cake - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/2.png",
+    "description": "Grattan the bear has a very special cake made for someone's birthday. She brought some sparklers to celebrate too!",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Abner's Balloons - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/bafybeidydh42idpxhskfcowrd5ktfd77dgg3kaozvddv4ee3kmk2pfdvyi/Congrats%20Red.png",
+    "description": "Balloons are for celebrating! Abner has 7 balloons to mark this very special occasion.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Congratulations" },
+      { "trait_type": "Artist", "value": "@bunnibibo" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "The Clown Party - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/8.png",
+    "description": "The King Clown and his gingerbread posse are throwing a birthday party. Enjoy the special day with the clown and his friends.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Birthday" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Pumpkin Ceremony - Airdrop Edition",
+    "image": "https://ipfs.ovt.app/ipfs/QmaAFVxVPskWdS94LRJ6GjfqnAfeZYJykLt3UeidAMWrtQ/9.png",
+    "description": "Ghosts congregate around candy ceremoniously, summoning the squash on All Hallow's Eve.",
+    "external_url": "https://ovt.app/",
+    "attributes": [
+      { "trait_type": "Collection", "value": "Founders" },
+      { "trait_type": "Card Type", "value": "Halloween" },
+      { "trait_type": "Artist", "value": "@indraprastika" },
+      { "trait_type": "Special Edition", "value": "Airdrop" }
+    ]
+  }
+]
