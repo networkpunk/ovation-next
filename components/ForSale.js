@@ -140,10 +140,10 @@ export default function Example() {
             <div className="fixed inset-0 z-40 flex">
               <Transition.Child
                 as={Fragment}
-                enter="transition ease-in-out duration-300 transform"
+                enter="transition ease-in-out duration-300 transdiv"
                 enterFrom="translate-x-full"
                 enterTo="translate-x-0"
-                leave="transition ease-in-out duration-300 transform"
+                leave="transition ease-in-out duration-300 transdiv"
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
@@ -162,9 +162,9 @@ export default function Example() {
                     </button>
                   </div>
 
-                  <form className="mt-4 border-gray-200">
+                  <div className="mt-4 border-gray-200">
                     <AttributeListBox attributes={filters} />
-                  </form>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
@@ -192,11 +192,11 @@ export default function Example() {
                 <Transition
                   as={Fragment}
                   enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
+                  enterFrom="transdiv opacity-0 scale-95"
+                  enterTo="transdiv opacity-100 scale-100"
                   leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
+                  leaveFrom="transdiv opacity-100 scale-100"
+                  leaveTo="transdiv opacity-0 scale-95"
                 >
                   <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
@@ -247,7 +247,7 @@ export default function Example() {
             </h2>
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-              <form className="hidden lg:block">
+              <div className="hidden lg:block">
                 <ul
                   role="list"
                   className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
@@ -264,8 +264,7 @@ export default function Example() {
                   ))}
                 </ul>
                 <AttributeListBox attributes={filters} />
-              </form>
-
+              </div>
               <div className="lg:col-span-3">
                 <ItemGrid metaData={metaData} />
               </div>

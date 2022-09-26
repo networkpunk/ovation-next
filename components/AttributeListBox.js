@@ -22,7 +22,10 @@ export default function AttributeListBox({ attributes }) {
               <h3 className="-my-3 flow-root">
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                   <span className="font-semibold text-lg">{section.name}</span>
-                  <span className="ml-6 flex items-center">
+                  <span className="flex items-center">
+                    <span className="mr-2 text-xs text-gray-500">
+                      {section.amount}
+                    </span>
                     {open ? (
                       <MinusIcon className="h-5 w-5" aria-hidden="true" />
                     ) : (
@@ -31,10 +34,13 @@ export default function AttributeListBox({ attributes }) {
                   </span>
                 </Disclosure.Button>
               </h3>
-              <Disclosure.Panel className="ml-2 pt-6">
-                <div className="space-y-4">
-                  {section.options.map((option, optionIdx) => (
-                    <div key={option.value} className="flex items-center">
+              <Disclosure.Panel className="pt-6">
+                {section.options.map((option, optionIdx) => (
+                  <button
+                    key={option.value}
+                    className="flex items-center justify-between mb-1 px-4 py-2 w-full rounded-lg text-left text-sm font-medium text-purple-900 hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+                  >
+                    <span className="flex items-center">
                       <input
                         id={`filter-${section.id}-${optionIdx}`}
                         name={`${section.id}[]`}
@@ -43,15 +49,11 @@ export default function AttributeListBox({ attributes }) {
                         defaultChecked={option.checked}
                         className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                       />
-                      <label
-                        htmlFor={`filter-${section.id}-${optionIdx}`}
-                        className="ml-3 text-sm text-gray-600"
-                      >
-                        {option.label}
-                      </label>
-                    </div>
-                  ))}
-                </div>
+                      <span className="ml-3 text-gray-600">{option.label}</span>
+                    </span>
+                    <span className="text-gray-500">{option.amount}</span>
+                  </button>
+                ))}
               </Disclosure.Panel>
             </React.Fragment>
           )}
