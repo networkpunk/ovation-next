@@ -1,13 +1,13 @@
-import React from "react"
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react"
+import React from "react";
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   ChevronDownIcon,
   FunnelIcon,
   MinusIcon,
   PlusIcon,
   Squares2X2Icon,
-} from "@heroicons/react/20/solid"
-import AttributeListItem from "./AttributeListItem"
+} from "@heroicons/react/20/solid";
+import AttributeListItem from "./AttributeListItem";
 
 export default function AttributeListBox({ attributes, filterHandle }) {
   return (
@@ -38,7 +38,7 @@ export default function AttributeListBox({ attributes, filterHandle }) {
                   />
                 ))}
               </Disclosure.Panel>
-            </div>
+            </React.Fragment>
           )}
         </Disclosure>
       ))}

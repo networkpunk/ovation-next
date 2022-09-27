@@ -1,12 +1,12 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 export default function AttributeListItem({ option, filterHandle }) {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false);
 
   const handle = () => {
-    setChecked(!checked)
-    filterHandle(option.value)
-  }
+    setChecked(!checked);
+    filterHandle(option.value);
+  };
 
   return (
     <button
@@ -24,5 +24,5 @@ export default function AttributeListItem({ option, filterHandle }) {
       </span>
       <span className="text-gray-500">{option.amount}</span>
     </button>
-  )
+  );
 }

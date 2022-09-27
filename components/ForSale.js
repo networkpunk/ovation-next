@@ -134,7 +134,7 @@ export default function Example() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-black">
       <div>
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
           <Dialog
@@ -265,7 +265,10 @@ export default function Example() {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               <div className="hidden lg:block">
-                <AttributeListBox attributes={filters} />
+                <AttributeListBox
+                  attributes={filters}
+                  filterHandle={handleFilter}
+                />
               </div>
               <div className="lg:col-span-3">
                 <ItemGrid metaData={filteredItems} />
