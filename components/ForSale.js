@@ -1,17 +1,17 @@
-import { Fragment, useState, useEffect } from "react";
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Fragment, useState, useEffect } from "react"
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react"
+import { XMarkIcon } from "@heroicons/react/24/outline"
 import {
   ChevronDownIcon,
   FunnelIcon,
   MinusIcon,
   PlusIcon,
   Squares2X2Icon,
-} from "@heroicons/react/20/solid";
+} from "@heroicons/react/20/solid"
 
-import metaData from "../public/metadata.json";
-import ItemGrid from "../components/ItemGrid";
-import AttributeListBox from "../components/AttributeListBox";
+import metaData from "../public/metadata.json"
+import ItemGrid from "../components/ItemGrid"
+import AttributeListBox from "../components/AttributeListBox"
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -19,9 +19,9 @@ const sortOptions = [
   { name: "Newest", href: "#", current: false },
   { name: "Price: Low to High", href: "#", current: false },
   { name: "Price: High to Low", href: "#", current: false },
-];
+]
 
-const subCategories = [{ name: "Founder's Collection", href: "#" }];
+const subCategories = [{ name: "Founder's Collection", href: "#" }]
 
 const filters = [
   {
@@ -29,10 +29,10 @@ const filters = [
     name: "Special Edition",
     amount: 4,
     options: [
-      { value: "genesis", label: "Genesis", checked: false, amount: 1 },
-      { value: "collectors", label: "Collector's", checked: false, amount: 3 },
-      { value: "standard", label: "Standard", checked: false, amount: 34 },
-      { value: "airdrop", label: "Airdrop", checked: false, amount: 5 },
+      { value: "Genesis", label: "Genesis", checked: false, amount: 1 },
+      { value: "Collector's", label: "Collector's", checked: false, amount: 3 },
+      { value: "Standard", label: "Standard", checked: false, amount: 34 },
+      { value: "Airdrop", label: "Airdrop", checked: false, amount: 5 },
     ],
   },
   {
@@ -56,11 +56,10 @@ const filters = [
         amount: 1,
       },
       { value: "Birthday", label: "Birthday", checked: false, amount: 3 },
-      { value: "Halloween", label: "Halloween", checked: false, amount: 34 },
       { value: "Valentines", label: "Valentines", checked: false, amount: 5 },
     ],
   },
-];
+]
 
 const exFilters = [
   {
@@ -98,26 +97,44 @@ const exFilters = [
       { value: "40l", label: "40L", checked: true },
     ],
   },
-];
+]
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-function handleFilterOptions(filterOption) {
-  const filtered = [];
-  const filteredOption = metaData.filter((item) => {
-    item.attributes.value == filterOption;
-  });
-  console.log(filtered);
+  return classes.filter(Boolean).join(" ")
 }
 
 export default function Example() {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [filteredItems, setFilteredItems] = useState(0);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [selectedFilters, setSelectedFilters] = useState([])
+  const [filteredItems, setFilteredItems] = useState(metaData)
+
+  const handleFilter = (option) => {
+    const concat = selectedFilters.concat(option)
+    setSelectedFilters(concat)
+    console.log(selectedFilters)
+  }
+
+  const handleFilterOptions = (filters) => {
+    const filtered = metaData.filter((item) => {
+      if (
+        item.attributes.some((att) => {
+          if (
+            filters.some((filter) => {
+              if (filter.value === att.value) return 1
+            })
+          ) {
+            return 1
+          }
+        })
+      )
+        return item
+    })
+
+    setFilteredItems(filtered)
+  }
 
   return (
-    <div className="">
+    <div className="bg-white">
       <div>
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
           <Dialog
@@ -254,24 +271,22 @@ export default function Example() {
                 >
                   {subCategories.map((category) => (
                     <li key={category.name}>
-                      <a
-                        onClick={handleFilterOptions("Happy Birthday")}
-                        href={category.href}
-                      >
-                        {category.name}
-                      </a>
+                      <a href={category.href}>{category.name}</a>
                     </li>
                   ))}
                 </ul>
-                <AttributeListBox attributes={filters} />
+                <AttributeListBox
+                  attributes={filters}
+                  filterHandle={handleFilter}
+                />
               </div>
               <div className="lg:col-span-3">
-                <ItemGrid metaData={metaData} />
+                <ItemGrid metaData={filteredItems} />
               </div>
             </div>
           </section>
         </main>
       </div>
     </div>
-  );
+  )
 }
