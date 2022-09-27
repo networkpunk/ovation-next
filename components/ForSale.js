@@ -29,10 +29,10 @@ const filters = [
     name: "Special Edition",
     amount: 4,
     options: [
-      { value: "genesis", label: "Genesis", checked: false, amount: 1 },
-      { value: "collectors", label: "Collector's", checked: false, amount: 3 },
-      { value: "standard", label: "Standard", checked: false, amount: 34 },
-      { value: "airdrop", label: "Airdrop", checked: false, amount: 5 },
+      { value: "Genesis", label: "Genesis", checked: false, amount: 1 },
+      { value: "Collector's", label: "Collector's", checked: false, amount: 3 },
+      { value: "Standard", label: "Standard", checked: false, amount: 34 },
+      { value: "Airdrop", label: "Airdrop", checked: false, amount: 5 },
     ],
   },
   {
@@ -56,7 +56,6 @@ const filters = [
         amount: 1,
       },
       { value: "Birthday", label: "Birthday", checked: false, amount: 3 },
-      { value: "Halloween", label: "Halloween", checked: false, amount: 34 },
       { value: "Valentines", label: "Valentines", checked: false, amount: 5 },
     ],
   },
@@ -104,17 +103,35 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function handleFilterOptions(filterOption) {
-  const filtered = [];
-  const filteredOption = metaData.filter((item) => {
-    item.attributes.value == filterOption;
-  });
-  console.log(filtered);
-}
-
 export default function Example() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [filteredItems, setFilteredItems] = useState(0);
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [filteredItems, setFilteredItems] = useState(metaData);
+
+  const handleFilter = (option) => {
+    const concat = selectedFilters.concat(option);
+    setSelectedFilters(concat);
+    console.log(selectedFilters);
+  };
+
+  const handleFilterOptions = (filters) => {
+    const filtered = metaData.filter((item) => {
+      if (
+        item.attributes.some((att) => {
+          if (
+            filters.some((filter) => {
+              if (filter.value === att.value) return 1;
+            })
+          ) {
+            return 1;
+          }
+        })
+      )
+        return item;
+    });
+
+    setFilteredItems(filtered);
+  };
 
   return (
     <div className="bg-white">
@@ -251,7 +268,7 @@ export default function Example() {
                 <AttributeListBox attributes={filters} />
               </div>
               <div className="lg:col-span-3">
-                <ItemGrid metaData={metaData} />
+                <ItemGrid metaData={filteredItems} />
               </div>
             </div>
           </section>
