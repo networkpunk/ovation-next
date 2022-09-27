@@ -117,7 +117,7 @@ export default function Example() {
   const [filteredItems, setFilteredItems] = useState(0);
 
   return (
-    <div className="">
+    <div className="bg-white">
       <div>
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>
           <Dialog
@@ -248,21 +248,6 @@ export default function Example() {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               <div className="hidden lg:block">
-                <ul
-                  role="list"
-                  className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
-                >
-                  {subCategories.map((category) => (
-                    <li key={category.name}>
-                      <a
-                        onClick={handleFilterOptions("Happy Birthday")}
-                        href={category.href}
-                      >
-                        {category.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
                 <AttributeListBox attributes={filters} />
               </div>
               <div className="lg:col-span-3">

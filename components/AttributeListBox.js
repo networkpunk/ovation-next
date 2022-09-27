@@ -10,35 +10,29 @@ import {
 
 export default function AttributeListBox({ attributes }) {
   return (
-    <React.Fragment>
+    <div className="bg-white rounded-lg pb-2">
       {attributes.map((section) => (
-        <Disclosure
-          as="div"
-          key={section.id}
-          className="border-b border-gray-200 py-6"
-        >
+        <Disclosure as="div" key={section.id} className="mx-2 pt-2">
           {({ open }) => (
-            <React.Fragment>
-              <h3 className="-my-3 flow-root">
-                <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                  <span className="font-semibold text-lg">{section.name}</span>
-                  <span className="flex items-center">
-                    <span className="mr-2 text-xs text-gray-500">
-                      {section.amount}
-                    </span>
-                    {open ? (
-                      <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                    ) : (
-                      <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                    )}
+            <div className="">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                <span className="font-semibold text-lg">{section.name}</span>
+                <span className="flex items-center">
+                  <span className="mr-2 text-xs text-gray-500">
+                    {section.amount}
                   </span>
-                </Disclosure.Button>
-              </h3>
-              <Disclosure.Panel className="pt-6">
+                  {open ? (
+                    <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                  ) : (
+                    <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                  )}
+                </span>
+              </Disclosure.Button>
+              <Disclosure.Panel className="mt-1">
                 {section.options.map((option, optionIdx) => (
                   <button
                     key={option.value}
-                    className="flex items-center justify-between mb-1 px-4 py-2 w-full rounded-lg text-left text-sm font-medium text-purple-900 hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+                    className="flex items-center text-sm justify-between mb-1 py-2 px-4 w-full rounded-lg text-left text-purple-900 hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
                   >
                     <span className="flex items-center">
                       <input
@@ -55,10 +49,10 @@ export default function AttributeListBox({ attributes }) {
                   </button>
                 ))}
               </Disclosure.Panel>
-            </React.Fragment>
+            </div>
           )}
         </Disclosure>
       ))}
-    </React.Fragment>
+    </div>
   );
 }
