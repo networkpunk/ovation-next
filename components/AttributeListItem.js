@@ -17,12 +17,16 @@ export default function AttributeListItem({ option, filterHandle }) {
         <input
           type="checkbox"
           checked={checked}
-          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          className="items-center h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
           readOnly
         />
-        <label className="ml-3 text-gray-600">{option.label}</label>
+        <label className="items-center ml-3 text-gray-600">
+          {option.label}
+        </label>
       </span>
-      <span className="text-gray-500">{option.amount}</span>
+      <span className="items-center text-xs text-gray-500">
+        {option.amount}
+      </span>
     </button>
   );
 }
