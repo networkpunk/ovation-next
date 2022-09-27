@@ -105,32 +105,28 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
   const [selectedFilters, setSelectedFilters] = useState([]);
-  const [filteredItems, setFilteredItems] = useState(metaData);
+  const [itemsDisplayed, setItemsDisplayed] = useState(metaData);
 
   const handleFilter = (option) => {
-    if (
-      selectedFilters.some((filter) => {
-        if (filter === option) {
-          console.log("remove", filter);
-          const newFilts = selectedFilters;
-          const idx = newFilts.indexOf(option);
-          newFilts.splice(idx, 1);
-          setSelectedFilters(newFilts);
-          console.log("updated filters to", newFilts);
-          return filter;
-        }
-      })
-    ) {
+    if (selectedFilters.includes(option)) {
+      console.log("remove", option);
+      const newFilters = selectedFilters.filter((filter) => {
+        return filter !== option;
+      });
+      setSelectedFilters(newFilters);
     } else {
       const concat = selectedFilters.concat(option);
       setSelectedFilters(concat);
-      console.log("adds", option);
+      console.log("add", option);
     }
   };
 
   useEffect(() => {
-    if (selectedFilters) {
+    if (selectedFilters.length === 0) {
+      setItemsDisplayed(metaData);
+    } else {
       const filtered = metaData.filter((item) => {
         if (
           item.attributes.some((att) => {
@@ -145,11 +141,12 @@ export default function Example() {
         )
           return item;
       });
-      setFilteredItems(filtered);
-    } else {
-      console.log("nothing selected");
-      setFilteredItems(metaData);
+      console.log("fuck my shit");
+      setItemsDisplayed(filtered);
     }
+  }, [selectedFilters, setItemsDisplayed]);
+
+  useEffect(() => {
     console.log("filters selected:", selectedFilters);
   }, [selectedFilters, setSelectedFilters]);
 
@@ -291,7 +288,7 @@ export default function Example() {
                 />
               </div>
               <div className="lg:col-span-3 bg-white rounded-md px-2 py-2">
-                <ItemGrid metaData={filteredItems} />
+                <ItemGrid metaData={itemsDisplayed} />
               </div>
             </div>
           </section>
