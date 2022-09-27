@@ -109,29 +109,49 @@ export default function Example() {
   const [filteredItems, setFilteredItems] = useState(metaData);
 
   const handleFilter = (option) => {
-    const concat = selectedFilters.concat(option);
-    setSelectedFilters(concat);
-    console.log(selectedFilters);
+    if (
+      selectedFilters.some((filter) => {
+        if (filter === option) {
+          console.log("remove", filter);
+          const newFilts = selectedFilters;
+          const idx = newFilts.indexOf(option);
+          newFilts.splice(idx, 1);
+          setSelectedFilters(newFilts);
+          console.log("updated filters to", newFilts);
+          return filter;
+        }
+      })
+    ) {
+    } else {
+      const concat = selectedFilters.concat(option);
+      setSelectedFilters(concat);
+      console.log("adds", option);
+    }
   };
 
-  const handleFilterOptions = (filters) => {
-    const filtered = metaData.filter((item) => {
-      if (
-        item.attributes.some((att) => {
-          if (
-            filters.some((filter) => {
-              if (filter.value === att.value) return 1;
-            })
-          ) {
-            return 1;
-          }
-        })
-      )
-        return item;
-    });
-
-    setFilteredItems(filtered);
-  };
+  useEffect(() => {
+    if (selectedFilters) {
+      const filtered = metaData.filter((item) => {
+        if (
+          item.attributes.some((att) => {
+            if (
+              selectedFilters.some((filter) => {
+                if (filter === att.value) return 1;
+              })
+            ) {
+              return 1;
+            }
+          })
+        )
+          return item;
+      });
+      setFilteredItems(filtered);
+    } else {
+      console.log("nothing selected");
+      setFilteredItems(metaData);
+    }
+    console.log("filters selected:", selectedFilters);
+  }, [selectedFilters, setSelectedFilters]);
 
   return (
     <div className="bg-black">
@@ -263,14 +283,14 @@ export default function Example() {
               Products
             </h2>
 
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
               <div className="hidden lg:block">
                 <AttributeListBox
                   attributes={filters}
                   filterHandle={handleFilter}
                 />
               </div>
-              <div className="lg:col-span-3">
+              <div className="lg:col-span-3 bg-white rounded-md px-2 py-2">
                 <ItemGrid metaData={filteredItems} />
               </div>
             </div>

@@ -18,7 +18,6 @@ export default function AttributeListBox({ attributes, filterHandle }) {
             <React.Fragment>
               <Disclosure.Button className="flex items-center w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span className="font-semibold text-lg">{section.name}</span>
-
                 <span className="flex items-center">
                   <span className="mr-2 text-xs text-gray-500">
                     {section.amount}
