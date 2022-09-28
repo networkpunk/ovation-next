@@ -12,6 +12,7 @@ import {
 import metaData from "../public/metadata.json";
 import ItemGrid from "../components/ItemGrid";
 import AttributeListBox from "../components/AttributeListBox";
+import MobileFilterDrawer from "./MobileFilterDrawer";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -104,10 +105,10 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [itemsDisplayed, setItemsDisplayed] = useState(metaData);
+
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const handleFilter = (option) => {
     if (selectedFilters.includes(option)) {
@@ -151,63 +152,17 @@ export default function Example() {
   }, [selectedFilters, setSelectedFilters]);
 
   return (
-    <div className="bg-black">
+    <div className="bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
       <div>
-        <Transition.Root show={mobileFiltersOpen} as={Fragment}>
-          <Dialog
-            as="div"
-            className="relative z-40 lg:hidden"
-            onClose={setMobileFiltersOpen}
-          >
-            <Transition.Child
-              as={Fragment}
-              enter="transition-opacity ease-linear duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="transition-opacity ease-linear duration-300"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <div className="fixed inset-0 bg-black bg-opacity-25" />
-            </Transition.Child>
-
-            <div className="fixed inset-0 z-40 flex">
-              <Transition.Child
-                as={Fragment}
-                enter="transition ease-in-out duration-300 transdiv"
-                enterFrom="translate-x-full"
-                enterTo="translate-x-0"
-                leave="transition ease-in-out duration-300 transdiv"
-                leaveFrom="translate-x-0"
-                leaveTo="translate-x-full"
-              >
-                <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
-                  <div className="flex items-center justify-between px-4">
-                    <h2 className="text-lg font-medium text-gray-900">
-                      Filters
-                    </h2>
-                    <button
-                      type="button"
-                      className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
-                      onClick={() => setMobileFiltersOpen(false)}
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                  </div>
-
-                  <div className="mt-4 border-gray-200">
-                    <AttributeListBox attributes={filters} />
-                  </div>
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </Dialog>
-        </Transition.Root>
-
+        <MobileFilterDrawer
+          filters={filters}
+          filterHandle={handleFilter}
+          mobileFiltersOpen={mobileFiltersOpen}
+          setMobileFiltersOpen={setMobileFiltersOpen}
+        />
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pt-12 pb-6">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-100/80">
               Ovation NFT
             </h1>
 
@@ -283,11 +238,11 @@ export default function Example() {
             <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
               <div className="hidden lg:block">
                 <AttributeListBox
-                  attributes={filters}
+                  filters={filters}
                   filterHandle={handleFilter}
                 />
               </div>
-              <div className="lg:col-span-3 bg-white rounded-md px-2 py-2">
+              <div className="lg:col-span-3 bg-white/20 rounded-md px-2 py-2">
                 <ItemGrid metaData={itemsDisplayed} />
               </div>
             </div>

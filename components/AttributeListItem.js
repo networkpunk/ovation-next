@@ -11,7 +11,7 @@ export default function AttributeListItem({ option, filterHandle }) {
   return (
     <button
       onClick={() => handle()}
-      className="flex items-center justify-between mb-1 px-4 py-2 w-full rounded-lg text-left text-sm font-medium text-purple-900 hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
+      className="flex items-center justify-between mb-1 px-4 py-2 w-full rounded-lg text-left hover:bg-gray-50/10 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75"
     >
       <span className="flex items-center">
         <input
@@ -20,11 +20,11 @@ export default function AttributeListItem({ option, filterHandle }) {
           className="items-center h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
           readOnly
         />
-        <label className="items-center ml-3 text-gray-600">
+        <label className="items-center ml-3 text-black text-sm">
           {option.label}
         </label>
       </span>
-      <span className="items-center text-xs text-gray-500">
+      <span className="items-center text-gray-800 text-xs">
         {option.amount}
       </span>
     </button>

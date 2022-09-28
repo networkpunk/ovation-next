@@ -1,6 +1,6 @@
 const ItemCard = ({ item }) => {
   return (
-    <div className="w-full rounded-lg shadow-md lg:max-w-sm">
+    <div className="w-full bg-white rounded-lg shadow-md lg:max-w-sm">
       <img className="object-cover w-full" src={item.image} alt="image" />
       <div className="p-4">
         <h4 className="font-bold">{item.name}</h4>

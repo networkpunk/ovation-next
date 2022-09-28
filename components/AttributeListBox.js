@@ -9,10 +9,10 @@ import {
 } from "@heroicons/react/20/solid";
 import AttributeListItem from "./AttributeListItem";
 
-export default function AttributeListBox({ attributes, filterHandle }) {
+export default function AttributeListBox({ filters, filterHandle }) {
   return (
-    <div className="bg-white rounded-lg pb-2">
-      {attributes.map((section) => (
+    <div className="bg-white/20 rounded-lg pb-2">
+      {filters.map((section) => (
         <Disclosure as="div" key={section.id} className="mx-2 pt-2">
           {({ open }) => (
             <React.Fragment>
