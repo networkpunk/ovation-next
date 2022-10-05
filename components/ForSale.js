@@ -21,33 +21,33 @@ const filters = [
     amount: 4,
     options: [
       { value: "Genesis", label: "Genesis", checked: 0, amount: 1 },
-      { value: "Collectors", label: "Collector's", checked: 0, amount: 3 },
-      { value: "Standard", label: "Standard", checked: 0, amount: 34 },
-      { value: "Airdrop", label: "Airdrop", checked: 0, amount: 5 },
+      { value: "Collectors", label: "Collector's", checked: 0, amount: 18 },
+      { value: "Standard", label: "Standard", checked: 0, amount: 16 },
+      { value: "Airdrop", label: "Airdrop", checked: 0, amount: 12 },
     ],
   },
   {
     id: "cardType",
     name: "Card Type",
-    amount: 8,
+    amount: 7,
     options: [
-      { value: "Celebratory", label: "Celebratory", checked: 0, amount: 1 },
+      { value: "Celebratory", label: "Celebratory", checked: 0, amount: 4 },
       {
         value: "Get Well Soon",
         label: "Get Well Soon",
         checked: false,
-        amount: 3,
+        amount: 5,
       },
-      { value: "Halloween", label: "Halloween", checked: 0, amount: 34 },
-      { value: "Easter", label: "Easter", checked: 0, amount: 5 },
+      { value: "Halloween", label: "Halloween", checked: 0, amount: 3 },
+      { value: "Easter", label: "Easter", checked: 0, amount: 2 },
       {
         value: "Congratulations",
         label: "Congratulations",
         checked: false,
-        amount: 1,
+        amount: 6,
       },
-      { value: "Birthday", label: "Birthday", checked: 0, amount: 3 },
-      { value: "Valentines", label: "Valentines", checked: 0, amount: 5 },
+      { value: "Birthday", label: "Birthday", checked: 0, amount: 9 },
+      { value: "Valentines", label: "Valentines", checked: 0, amount: 3 },
     ],
   },
 ];
@@ -98,7 +98,7 @@ export default function Example() {
         )
           return item;
       });
-      console.log(filtered);
+      console.log("displaying", filtered.length);
       setItemsDisplayed(filtered);
     }
   }, [selectedFilters, setItemsDisplayed]);
