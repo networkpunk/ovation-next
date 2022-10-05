@@ -14,26 +14,16 @@ import ItemGrid from "../components/ItemGrid";
 import AttributeListBox from "../components/AttributeListBox";
 import MobileFilterDrawer from "./MobileFilterDrawer";
 
-const sortOptions = [
-  { name: "Most Popular", href: "#", current: true },
-  { name: "Best Rating", href: "#", current: false },
-  { name: "Newest", href: "#", current: false },
-  { name: "Price: Low to High", href: "#", current: false },
-  { name: "Price: High to Low", href: "#", current: false },
-];
-
-const subCategories = [{ name: "Founder's Collection", href: "#" }];
-
 const filters = [
   {
     id: "edition",
     name: "Special Edition",
     amount: 4,
     options: [
-      { value: "Genesis", label: "Genesis", checked: false, amount: 1 },
-      { value: "Collector's", label: "Collector's", checked: false, amount: 3 },
-      { value: "Standard", label: "Standard", checked: false, amount: 34 },
-      { value: "Airdrop", label: "Airdrop", checked: false, amount: 5 },
+      { value: "Genesis", label: "Genesis", checked: 0, amount: 1 },
+      { value: "Collectors", label: "Collector's", checked: 0, amount: 3 },
+      { value: "Standard", label: "Standard", checked: 0, amount: 34 },
+      { value: "Airdrop", label: "Airdrop", checked: 0, amount: 5 },
     ],
   },
   {
@@ -41,61 +31,23 @@ const filters = [
     name: "Card Type",
     amount: 8,
     options: [
-      { value: "Celebratory", label: "Celebratory", checked: false, amount: 1 },
+      { value: "Celebratory", label: "Celebratory", checked: 0, amount: 1 },
       {
         value: "Get Well Soon",
         label: "Get Well Soon",
         checked: false,
         amount: 3,
       },
-      { value: "Halloween", label: "Halloween", checked: false, amount: 34 },
-      { value: "Easter", label: "Easter", checked: false, amount: 5 },
+      { value: "Halloween", label: "Halloween", checked: 0, amount: 34 },
+      { value: "Easter", label: "Easter", checked: 0, amount: 5 },
       {
         value: "Congratulations",
         label: "Congratulations",
         checked: false,
         amount: 1,
       },
-      { value: "Birthday", label: "Birthday", checked: false, amount: 3 },
-      { value: "Valentines", label: "Valentines", checked: false, amount: 5 },
-    ],
-  },
-];
-
-const exFilters = [
-  {
-    id: "color",
-    name: "Color",
-    options: [
-      { value: "white", label: "White", checked: false },
-      { value: "beige", label: "Beige", checked: false },
-      { value: "blue", label: "Blue", checked: true },
-      { value: "brown", label: "Brown", checked: false },
-      { value: "green", label: "Green", checked: false },
-      { value: "purple", label: "Purple", checked: false },
-    ],
-  },
-  {
-    id: "category",
-    name: "Category",
-    options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
-    ],
-  },
-  {
-    id: "size",
-    name: "Size",
-    options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: "Birthday", label: "Birthday", checked: 0, amount: 3 },
+      { value: "Valentines", label: "Valentines", checked: 0, amount: 5 },
     ],
   },
 ];
@@ -124,10 +76,14 @@ export default function Example() {
     }
   };
 
+  // this hook is going through the selected filters which is just the list of values, pretty bad
   useEffect(() => {
+    // if no filters are selected
     if (selectedFilters.length === 0) {
+      // show all of the items
       setItemsDisplayed(metaData);
     } else {
+      //
       const filtered = metaData.filter((item) => {
         if (
           item.attributes.some((att) => {
@@ -142,7 +98,7 @@ export default function Example() {
         )
           return item;
       });
-      console.log("fuck my shit");
+      console.log(filtered);
       setItemsDisplayed(filtered);
     }
   }, [selectedFilters, setItemsDisplayed]);
@@ -152,103 +108,45 @@ export default function Example() {
   }, [selectedFilters, setSelectedFilters]);
 
   return (
-    <div className="bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
-      <div>
-        <MobileFilterDrawer
-          filters={filters}
-          filterHandle={handleFilter}
-          mobileFiltersOpen={mobileFiltersOpen}
-          setMobileFiltersOpen={setMobileFiltersOpen}
-        />
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pt-12 pb-6">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-100/80">
-              Ovation NFT
-            </h1>
-
-            <div className="flex items-center">
-              <Menu as="div" className="relative inline-block text-left">
-                <div>
-                  <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                    Sort
-                    <ChevronDownIcon
-                      className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                  </Menu.Button>
-                </div>
-
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transdiv opacity-0 scale-95"
-                  enterTo="transdiv opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transdiv opacity-100 scale-100"
-                  leaveTo="transdiv opacity-0 scale-95"
-                >
-                  <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1">
-                      {sortOptions.map((option) => (
-                        <Menu.Item key={option.name}>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                option.current
-                                  ? "font-medium text-gray-900"
-                                  : "text-gray-500",
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm"
-                              )}
-                            >
-                              {option.name}
-                            </a>
-                          )}
-                        </Menu.Item>
-                      ))}
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-
-              <button
-                type="button"
-                className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
-              >
-                <span className="sr-only">View grid</span>
-                <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
-                onClick={() => setMobileFiltersOpen(true)}
-              >
-                <span className="sr-only">Filters</span>
-                <FunnelIcon className="h-5 w-5" aria-hidden="true" />
-              </button>
+    <main className="bg-scroll bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
+      <MobileFilterDrawer
+        filters={filters}
+        selectedFilters={selectedFilters}
+        filterHandle={handleFilter}
+        mobileFiltersOpen={mobileFiltersOpen}
+        setMobileFiltersOpen={setMobileFiltersOpen}
+      />
+      <div className="mx-auto px-4">
+        <div className="flex items-baseline justify-between border-b border-gray-200/20 py-4">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-200/80">
+            Ovation NFT
+          </h1>
+          <button
+            type="button"
+            className="text-gray-200/80 hover:text-gray-400/80 sm:ml-6 lg:hidden"
+            onClick={() => setMobileFiltersOpen(true)}
+          >
+            <span className="sr-only">Filters</span>
+            <FunnelIcon className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </div>
+        <section className="py-4">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
+            <div className="lg:col-span-3 bg-gray-200/20 rounded-md px-2 py-2">
+              <ItemGrid metaData={itemsDisplayed} />
             </div>
-          </div>
-
-          <section aria-labelledby="products-heading" className="pt-6 pb-24">
-            <h2 id="products-heading" className="sr-only">
-              Products
-            </h2>
-
-            <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
-              <div className="hidden lg:block">
+            <div className="hidden lg:block">
+              <div className="bg-gray-200/20 rounded-lg pb-2">
                 <AttributeListBox
                   filters={filters}
+                  selectedFilters={selectedFilters}
                   filterHandle={handleFilter}
                 />
               </div>
-              <div className="lg:col-span-3 bg-white/20 rounded-md px-2 py-2">
-                <ItemGrid metaData={itemsDisplayed} />
-              </div>
             </div>
-          </section>
-        </main>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }

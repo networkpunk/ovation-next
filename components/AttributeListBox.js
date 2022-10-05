@@ -9,9 +9,24 @@ import {
 } from "@heroicons/react/20/solid";
 import AttributeListItem from "./AttributeListItem";
 
-export default function AttributeListBox({ filters, filterHandle }) {
+export default function AttributeListBox({
+  filters,
+  selectedFilters,
+  filterHandle,
+}) {
+  const isChecked = (option) => {
+    if (
+      selectedFilters.some((filter) => {
+        if (filter === option.value) return 1;
+      })
+    ) {
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <div className="bg-white/20 rounded-lg pb-2">
+    <React.Fragment>
       {filters.map((section) => (
         <Disclosure as="div" key={section.id} className="mx-2 pt-2">
           {({ open }) => (
@@ -19,7 +34,7 @@ export default function AttributeListBox({ filters, filterHandle }) {
               <Disclosure.Button className="flex items-center w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span className="font-semibold text-lg">{section.name}</span>
                 <span className="flex items-center">
-                  <span className="mr-2 text-xs text-gray-500">
+                  <span className="mr-2 text-xs text-gray-600">
                     {section.amount}
                   </span>
                   <span>
@@ -36,6 +51,7 @@ export default function AttributeListBox({ filters, filterHandle }) {
                   <AttributeListItem
                     key={option.value}
                     option={option}
+                    checked={isChecked(option)}
                     filterHandle={filterHandle}
                   />
                 ))}
@@ -44,6 +60,6 @@ export default function AttributeListBox({ filters, filterHandle }) {
           )}
         </Disclosure>
       ))}
-    </div>
+    </React.Fragment>
   );
 }

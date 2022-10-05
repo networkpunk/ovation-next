@@ -14,6 +14,7 @@ import AttributeListBox from "./AttributeListBox";
 
 export default function MobileFilterDrawer({
   filters,
+  selectedFilters,
   filterHandle,
   mobileFiltersOpen,
   setMobileFiltersOpen,
@@ -47,22 +48,22 @@ export default function MobileFilterDrawer({
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
+            <Dialog.Panel className="bg-gray-50 relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
               <div className="flex items-center justify-between px-4">
-                <h2 className="text-lg font-medium text-gray-900">Filters</h2>
+                <h2 className="text-lg font-medium text-gray-800">Filters</h2>
                 <button
                   type="button"
-                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
+                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md p-2 text-gray-400"
                   onClick={() => setMobileFiltersOpen(false)}
                 >
-                  <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
 
-              <div className="mt-4 border-gray-200">
+              <div className="mt-4 border-t border-gray-200">
                 <AttributeListBox
                   filters={filters}
+                  selectedFilters={selectedFilters}
                   filterHandle={filterHandle}
                 />
               </div>

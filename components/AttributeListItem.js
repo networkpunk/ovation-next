@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 
-export default function AttributeListItem({ option, filterHandle }) {
-  const [checked, setChecked] = useState(false);
-
+export default function AttributeListItem({ option, filterHandle, checked }) {
   const handle = () => {
-    setChecked(!checked);
     filterHandle(option.value);
   };
 
@@ -20,11 +17,11 @@ export default function AttributeListItem({ option, filterHandle }) {
           className="items-center h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
           readOnly
         />
-        <label className="items-center ml-3 text-black text-sm">
+        <span className="items-center ml-3 text-gray-800 text-sm">
           {option.label}
-        </label>
+        </span>
       </span>
-      <span className="items-center text-gray-800 text-xs">
+      <span className="items-center text-gray-600 text-xs">
         {option.amount}
       </span>
     </button>
