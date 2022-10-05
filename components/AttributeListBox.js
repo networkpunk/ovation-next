@@ -28,7 +28,12 @@ export default function AttributeListBox({
   return (
     <React.Fragment>
       {filters.map((section) => (
-        <Disclosure as="div" key={section.id} className="mx-2 pt-2">
+        <Disclosure
+          defaultOpen={true}
+          as="div"
+          key={section.id}
+          className="mx-2 pt-2"
+        >
           {({ open }) => (
             <React.Fragment>
               <Disclosure.Button className="flex items-center w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
