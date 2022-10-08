@@ -76,6 +76,16 @@ export default function Example() {
     }
   };
 
+  function compare(a, b) {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  }
+
   // this hook is going through the selected filters which is just the list of values, pretty bad
   useEffect(() => {
     // if no filters are selected
@@ -98,7 +108,7 @@ export default function Example() {
         )
           return item;
       });
-      console.log("displaying", filtered.length);
+      console.log("displaying", filtered);
       setItemsDisplayed(filtered);
     }
   }, [selectedFilters, setItemsDisplayed]);
@@ -108,7 +118,7 @@ export default function Example() {
   }, [selectedFilters, setSelectedFilters]);
 
   return (
-    <main className="bg-scroll bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
+    <main className="h-full mx-auto max-w-7xl">
       <MobileFilterDrawer
         filters={filters}
         selectedFilters={selectedFilters}
@@ -118,25 +128,24 @@ export default function Example() {
       />
       <div className="mx-auto px-4">
         <div className="flex items-baseline justify-between border-b border-gray-200/20 py-4">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-200/80">
-            Ovation NFT
+          <h1 className="text-4xl font-bold tracking-tight text-white">
+            Founders Collection
           </h1>
           <button
             type="button"
-            className="text-gray-200/80 hover:text-gray-400/80 sm:ml-6 lg:hidden"
+            className="text-gray-200/80 hover:text-white sm:ml-6 lg:hidden"
             onClick={() => setMobileFiltersOpen(true)}
           >
-            <span className="sr-only">Filters</span>
             <FunnelIcon className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
         <section className="py-4">
           <div className="grid grid-cols-1 gap-x-4 gap-y-10 lg:grid-cols-4">
-            <div className="lg:col-span-3 bg-gray-50 rounded-md px-2 py-2">
+            <div className="lg:col-span-3 bg-gray-50/20 rounded-md px-2 py-2">
               <ItemGrid metaData={itemsDisplayed} />
             </div>
             <div className="hidden lg:block">
-              <div className="bg-gray-50 rounded-lg pb-2">
+              <div className="bg-gray-50/20 rounded-lg pb-2">
                 <AttributeListBox
                   filters={filters}
                   selectedFilters={selectedFilters}
